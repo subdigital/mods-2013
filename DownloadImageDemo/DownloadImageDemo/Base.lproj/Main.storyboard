@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0rS-vk-DX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWi-el-XRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-9U-Arv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-aN-wB4">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Download Image" id="z56-lp-rJQ">
+                                        <connections>
+                                            <action selector="downloadImageTapped:" destination="vXZ-lx-hvc" id="2SN-sh-8ad"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5E5-VZ-u0c"/>
+                                </items>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-qY-wLm">
+                                <rect key="frame" x="85" y="283" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="y1C-xe-JmX"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vcz-9U-Arv" secondAttribute="trailing" id="5og-89-mcp"/>
+                            <constraint firstAttribute="trailing" secondItem="Zkw-aN-wB4" secondAttribute="trailing" id="Ddq-pt-LLN"/>
+                            <constraint firstItem="Zkw-aN-wB4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Mgv-fm-Hpf"/>
+                            <constraint firstItem="vcz-9U-Arv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Vqd-KA-xOO"/>
+                            <constraint firstItem="vcz-9U-Arv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="av7-lr-oPb"/>
+                            <constraint firstItem="dvQ-qY-wLm" firstAttribute="centerX" secondItem="Zkw-aN-wB4" secondAttribute="centerX" id="eme-wO-8lf"/>
+                            <constraint firstItem="VWi-el-XRe" firstAttribute="top" secondItem="vcz-9U-Arv" secondAttribute="bottom" constant="44" id="kMW-bj-EgD"/>
+                            <constraint firstItem="dvQ-qY-wLm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ryH-a3-IWG"/>
+                            <constraint firstAttribute="bottom" secondItem="Zkw-aN-wB4" secondAttribute="bottom" id="sEe-re-Ha1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="vcz-9U-Arv" id="uUe-V5-YJL"/>
+                        <outlet property="progressView" destination="dvQ-qY-wLm" id="iWB-AY-8mW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
