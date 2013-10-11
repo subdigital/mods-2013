@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RandomNumberGenerator.h"
 
 typedef NS_ENUM(NSInteger, GuessResult) {
     GuessCorrect = 0,
@@ -20,6 +21,7 @@ typedef NS_ENUM(NSInteger, GuessResult) {
 @property (nonatomic, readonly) NSInteger maximumNumber;
 
 - (id)initWithMax:(NSInteger)max;
+- (id)initWithMax:(NSInteger)max numberGenerator:(id<NumberGenerator>)numberGenerator;
 
 - (GuessResult)guess:(NSInteger)number;
 

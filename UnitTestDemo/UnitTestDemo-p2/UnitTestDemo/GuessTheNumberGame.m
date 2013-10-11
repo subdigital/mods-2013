@@ -21,12 +21,18 @@
 }
 
 - (id)initWithMax:(NSInteger)max {
+    return [self initWithMax:max numberGenerator:[RandomNumberGenerator new]];
+}
+
+- (id)initWithMax:(NSInteger)max numberGenerator:(id<NumberGenerator>)numberGenerator {
     self = [super init];
     if (self) {
         _minimumNumber = 1;
         _maximumNumber = max;
+        _answer = [numberGenerator randomBetween:_minimumNumber and:_maximumNumber];
     }
-    return self;    
+    return self;
+    
 }
 
 - (GuessResult)guess:(NSInteger)number {

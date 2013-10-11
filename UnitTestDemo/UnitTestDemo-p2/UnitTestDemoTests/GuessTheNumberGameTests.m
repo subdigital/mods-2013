@@ -56,16 +56,4 @@
     XCTAssertEqual(self.game.maximumNumber, 12, @"Max should have been 12");
 }
 
-- (void)testGameSignifiesWhenAGuessIsCorrect {
-    id mockGenerator = [OCMockObject mockForProtocol:@protocol(NumberGenerator)];
-    NSUInteger returnVal = 5;
-    [[[mockGenerator expect] andReturnValue:OCMOCK_VALUE(returnVal)] randomBetween:1 and:10];
-    
-    GuessTheNumberGame *game = [[GuessTheNumberGame alloc] initWithMax:10 numberGenerator:mockGenerator];
-    GuessResult result = [game guess:5];
-    XCTAssertEqual(result, GuessCorrect, @"Should have been a correct guess");
-    
-    [mockGenerator verify];
-}
-
 @end
